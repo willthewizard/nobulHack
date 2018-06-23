@@ -36,6 +36,6 @@ transaction sendModel{
 }
 
 event messageEvent {
-  --> Message message
+  --> Model model 
   o String receiver
 }
