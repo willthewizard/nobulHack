@@ -27,7 +27,7 @@ rule EverybodyCanSubmitTransactions {
     description: "Allow all participants to submit transactions"
     participant: "org.example.biznet.User"
     operation: CREATE
-    resource: "org.example.biznet.sendMessage"
+    resource: "org.example.biznet.sendModel"
     action: ALLOW
 }
 
