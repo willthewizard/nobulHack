@@ -24,23 +24,17 @@ participant User identified by userId {
   o String lastName
 }
 
-asset Message identified by messageId {
-  o String messageId
-  --> User sender
-  --> User receiver
-  o String content
+asset Model identified by modelId {
+  o String Model
+  --> User user
 }
 
-transaction sendMessage{
-  --> Message message
-  o String receiver
-  o String sender
-  o String content
+transaction sendModel{
+  --> Model model
+  o String user
 }
 
 event messageEvent {
   --> Message message
   o String receiver
-  o String sender
-  o String content
 }
